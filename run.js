@@ -208,8 +208,8 @@ function start () {
 	app.run({
 		'callback': f,
 		'context': this,
-		'host': getURLParameter('host') || '10.11.12.100',
-		'port': getURLParameter('port') || 8000,
+		'host': getURLParameter('host') || window.location.hostname,
+		'port': getURLParameter('port') || window.location.port,
 		'protocol': getURLParameter('protocol') || 'ws',
 		'token': '1q2w3e4r',
 		'vmHost': getURLParameter('vmhost') || false,
